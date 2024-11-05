@@ -1,0 +1,95 @@
+/* Universal Styling And Colors*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto','sans-serif';
+}
+
+:root{
+    --midnight-blue: #2c3e50;
+    --cloud-white: #ecf0f1;
+    --sun-yellow: #f1c40f;
+    --emerald-green: #2ecc71;
+    --coral-red: #e74c3c;
+    --shadow-grey: #95a5a6;
+}
+
+body{
+    background-color: var(--cloud-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+.instruction{
+    border: solid black 2px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin:1rem ;
+    width: 270px;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--midnight-blue);
+    color: var(--sun-yellow);
+    
+}
+.quiz-container{
+    border: solid var(--shadow-grey) 2px;
+    background-color: var(--midnight-blue);
+    color: var(--cloud-white);
+    border-radius: 0.5rem;
+    height: 350px;
+    width: 700px;
+}
+.the-quiz h2{
+    color: var(--sun-yellow);
+}
+
+.the-quiz{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+/*Start Button Styles*/
+#startBtn, #play-again-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color:var(--sun-yellow);
+}
+
+#startBtn:hover, #play-again-btn:hover{
+    background-color: hsl(48, 89%, 45%);
+    cursor: pointer;
+}
+#startBtn:active, #play-again-btn:active{
+    background-color: hsl(48, 89%, 35%);
+}
+
+
+
+.choice-btn{
+    padding: 0.6rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--coral-red);
+    color: var(--cloud-white);
+    font-size: 1.1rem;
+}
+.choice-btn:hover{
+    background-color: hsl(6, 78%, 47%);
+}
+.choice-btn:active{
+    background-color: hsl(6, 78%, 27%);
+
+}
