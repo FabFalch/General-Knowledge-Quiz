@@ -1,13 +1,12 @@
-/* Universal Styling And Colors*/
-
-*{
+/* Universal Styling And Colors */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'roboto','sans-serif';
+    font-family: 'Roboto', 'sans-serif';
 }
 
-:root{
+:root {
     --midnight-blue: #2c3e50;
     --cloud-white: #ecf0f1;
     --sun-yellow: #f1c40f;
@@ -16,19 +15,21 @@
     --shadow-grey: #95a5a6;
 }
 
-body{
+body {
     background-color: var(--cloud-white);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: auto;
+    padding: 1rem;
 }
-.instruction{
+
+.instruction {
     border: solid black 2px;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    margin:1rem ;
+    margin: 1rem;
     width: 270px;
     height: 300px;
     display: grid;
@@ -37,9 +38,9 @@ body{
     text-align: center;
     background-color: var(--midnight-blue);
     color: var(--sun-yellow);
-    
 }
-.quiz-container{
+
+.quiz-container {
     border: solid var(--shadow-grey) 2px;
     background-color: var(--midnight-blue);
     color: var(--cloud-white);
@@ -47,11 +48,12 @@ body{
     height: 350px;
     width: 700px;
 }
-.the-quiz h2{
+
+.the-quiz h2 {
     color: var(--sun-yellow);
 }
 
-.the-quiz{
+.the-quiz {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -61,24 +63,23 @@ body{
     font-size: 1.2rem;
 }
 
-/*Start Button Styles*/
+/* Button Styles */
 #startBtn, #play-again-btn {
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    background-color:var(--sun-yellow);
+    background-color: var(--sun-yellow);
 }
 
-#startBtn:hover, #play-again-btn:hover{
+#startBtn:hover, #play-again-btn:hover {
     background-color: hsl(48, 89%, 45%);
     cursor: pointer;
 }
-#startBtn:active, #play-again-btn:active{
+
+#startBtn:active, #play-again-btn:active {
     background-color: hsl(48, 89%, 35%);
 }
 
-
-
-.choice-btn{
+.choice-btn {
     padding: 0.6rem 1rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
@@ -86,10 +87,44 @@ body{
     color: var(--cloud-white);
     font-size: 1.1rem;
 }
-.choice-btn:hover{
+
+.choice-btn:hover {
     background-color: hsl(6, 78%, 47%);
 }
-.choice-btn:active{
-    background-color: hsl(6, 78%, 27%);
 
+.choice-btn:active {
+    background-color: hsl(6, 78%, 27%);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .instruction, .quiz-container {
+        width: 90%; 
+        height: auto; 
+        padding: 1rem;
+    }
+
+    .quiz-container {
+        height: auto; 
+    }
+
+    .the-quiz h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .the-quiz {
+        padding: 1rem;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    #startBtn, #play-again-btn, .choice-btn {
+        width: 100%; 
+        font-size: 1rem;
+    }
+
+    .choice-btn {
+        padding: 0.5rem 0; 
+    }
 }
